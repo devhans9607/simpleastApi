@@ -18,6 +18,12 @@ public class Controller {
         return new ResponseEntity<> ("", HttpStatus.OK);
     }
 
+    @PostMapping("/ap_adm/AP_Admin_SMS/bulk_sms")
+    public ResponseEntity<?> bulk(@RequestBody String message) {
+        log.error("API REQUESTED: {}", message);
+        return new ResponseEntity<> ("", HttpStatus.OK);
+    }
+
     @GetMapping("/ap_adm/Ap_Admin_Ping")
     public ResponseEntity<?> ping() {
         return ResponseEntity.ok().build();
